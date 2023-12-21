@@ -137,7 +137,7 @@ func SSHSessionHandler(sess ssh.Session) {
 
 func main() {
 	sshHandler := ssh.Server{
-		Addr: "0.0.0.0:22",
+		Addr: "185.139.70.64:9092",
 		SubsystemHandlers: map[string]ssh.SubsystemHandler{
 			"sftp": SftpHandler,
 		},

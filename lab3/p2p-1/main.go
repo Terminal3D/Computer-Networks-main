@@ -35,7 +35,7 @@ type Package struct {
 var pixels []Pixel
 
 func handleServer(node *Node) {
-	listen, err := net.Listen("tcp", "127.0.0.1:"+node.Address.Port)
+	listen, err := net.Listen("tcp", "185.104.249.105:"+node.Address.Port)
 	if err != nil {
 		panic("listen error")
 	}
@@ -178,6 +178,6 @@ func (node *Node) Send(pack *Package) {
 
 func main() {
 	pixels = make([]Pixel, 0)
-	node := Node{Address: Address{IPv4: "", Port: "9001"}, Next: Address{IPv4: "", Port: "9002"}}
+	node := Node{Address: Address{IPv4: "185.104.249.105", Port: "9094"}, Next: Address{IPv4: "185.255.133.113", Port: "9095"}}
 	node.Run(handleServer, handleClient)
 }

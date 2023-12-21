@@ -34,7 +34,7 @@ func handleConnection(c *websocket.Conn) {
 }
 
 func main() {
-	c, resp, err := websocket.DefaultDialer.Dial("ws://localhost:8080", nil)
+	c, resp, err := websocket.DefaultDialer.Dial("ws://185.139.70.64:9099", nil)
 
 	if err != nil {
 		log.Printf("handshake failed with status %d", resp.StatusCode)
